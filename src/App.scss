@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  /* for Safari */
+  -moz-box-sizing: border-box;
+  /* for Firefox */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* -------------------------------------------------------- */
+/* Mixins & Media Queries */
+//@mixin phoneSize {
+//  @media (max-width: 640px) {
+//    @content;
+//  }
+//}
+
+//@mixin tabletSize {
+//  @media (min-width: 641px) and (max-width: 1023px) {
+//    @content;
+//  }
+//}
+
+//@mixin desktopSize {
+//  @media (min-width: 1024px) {
+//    @content;
+//  }
+//}
+
+/* -------------------------------------------------------- */
+/* App component */
+#container-app {
+  background-color: #e1e1e1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  #container-calculator {
+    background-color: #000;
+    border-radius: 5px;
+    width: 280px;
+    #container-display {
+      background-color: #000;
+      min-height: 100px;
+      border-radius: 5px;
+      padding: 25px;
+      #displayFormula,
+      #display {
+        background-color: #2a2a2a;
+        min-height: 50px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        word-break: break-all;
+        padding: 2px 10px;
+      }
+      #displayFormula {
+        font-size: 0.9rem;
+      }
+      #display {
+        font-size: 1.5rem;
+      }
+    }
+    #container-buttonKeys {
+      display: grid;
+      grid-template-columns: 50px 50px 50px 50px;
+      grid-template-rows: 50px 50px 50px 50px 50px;
+      grid-gap: 10px 10px;
+      padding: 10px 25px 25px 25px;
+      button {
+        border-radius: 50px;
+        border: none;
+        color: #fff;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  footer {
+    a {
+      display: inline-block; //necessary for '&:hover' to work
+      padding: 20px;
+      color: #2a2a2a;
+      font-size: 0.9rem;
+      font-style: italic;
+      text-decoration: none;
+      transition: transform 0.5s ease-in-out;
+      &:hover {
+        color: #ffa600;
+        transform: translateY(0.5rem);
+      }
+    }
+  }
+}
