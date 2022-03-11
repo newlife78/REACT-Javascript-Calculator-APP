@@ -133,7 +133,6 @@ const buttonKeys = [
 ];
 
 // REGEX Expressions:
-// See: https://www.w3schools.com/js/js_regexp.asp
 const decimalRegExp = /[\.*]/;
 const endsWithDecimalRegExp = /[\.]$/;
 const operatorsRegExp = /[\+\-x*\/]/i;
@@ -262,7 +261,6 @@ class App extends Component {
       });
     }
     //Handle '%' operator
-    //See: 'https://dev.to/sanchithasr/7-ways-to-convert-a-string-to-number-in-javascript-4l'
     else if (operator === "%" && currValue !== 0) {
       let percentage = (parseFloat(currValue) / 100).toString();
       let updatedFormula = /[=]$/.test(formula)
