@@ -3,9 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  /* for Safari */
   -moz-box-sizing: border-box;
-  /* for Firefox */
 }
 
 body {
@@ -16,26 +14,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* -------------------------------------------------------- */
-/* Mixins & Media Queries */
-//@mixin phoneSize {
-//  @media (max-width: 640px) {
-//    @content;
-//  }
-//}
-
-//@mixin tabletSize {
-//  @media (min-width: 641px) and (max-width: 1023px) {
-//    @content;
-//  }
-//}
-
-//@mixin desktopSize {
-//  @media (min-width: 1024px) {
-//    @content;
-//  }
-//}
 
 /* -------------------------------------------------------- */
 /* App component */
@@ -89,7 +67,7 @@ body {
   }
   footer {
     a {
-      display: inline-block; //necessary for '&:hover' to work
+      display: inline-block;
       padding: 20px;
       color: #2a2a2a;
       font-size: 0.9rem;
